@@ -1,0 +1,342 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #FAFAF8;
+}
+
+/* フォント専用クラス */
+.font_noto {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.font_outfit {
+    font-family: 'Outfit', sans-serif;
+} 
+
+/* 共通 */
+.section_title {
+    font-size: 80px;
+    font-weight: bold;
+    font-family: 'Outfit', sans-serif;
+    color: #333;
+}
+
+.section_text {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #333;
+    margin-top: 8px;
+}
+
+.section_text_white {
+    color: #FFF;
+}
+
+.section_title_white {
+    color: #FFF;
+}
+
+.button {
+    border-radius: 100px;
+    font-weight: bold;
+    padding: 20px 40px; 
+}
+
+/* inner */
+.inner {
+    width: 1180px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* fv */
+.fv_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.fv_headline {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+
+.fv_title {
+    font-size: 88px;
+    font-weight: bold;
+    color: #FFF
+}
+
+.fv_text {
+    font-size: 24px;
+    color: #FFF;
+}
+
+.fv_left {
+    width: 380px;
+}
+
+.fv_center {
+    width: 420px;
+}
+
+.fv_right {
+    width: 380px;
+}
+
+.fv_img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/* mission */
+.mission {
+    /* padding: 120px 0; */
+}
+
+.mission_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+    position: relative;
+}
+
+.mission_img {
+    width: 580px;
+    height: 580px;
+    position: relative;
+}
+
+.mission_img_bigger {
+    width: 480px;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.mission_img_smaller {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 30px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.mission_description {
+    width: 500px;
+}
+
+.mission_title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.mission_text {
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 40px;
+}
+
+.mission_button {
+    background-color: #333;
+    color: #FFF;
+}
+
+/* strengths */
+
+.strengths_container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.strengths_text {
+    font-size: 20px;
+    color: #333;
+    margin-top: 40px;
+    line-height: 2;
+}
+
+.strengths_triangle {
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+.strengths_triangle_center {
+    width: 392px;
+    height: 392px;
+    border-radius: 50%;
+    background-color: #F2F2EA;
+    color: #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.strengths_triangle_item {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.strengths_triangle_top {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.strengths_triangle_left {
+    position: absolute;
+    bottom: 0;
+    left: -50px;
+}
+
+.strengths_triangle_right {
+    position: absolute;
+    bottom: 0;
+    right: -50px;
+}
+
+/* services */
+
+.services {
+    background-color: #333;
+    color: #FFF;
+}
+
+.services_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.services_button {
+    background-color: #FFF;
+    color: #333;
+}
+
+.services_title {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.services_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.services_grid > div {
+    padding: 20px;
+    border-radius: 8px;      /* 角丸（必要に応じて） */
+}
+
+.services_number {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 20px;
+    background-color: #F7E40B;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* projects */
+
+.projects_item {
+    display: flex;
+    justify-content: start;
+    gap: 100px;
+    margin-top: 80px;
+}
+
+.projects_item_title {
+    font-size: 28px;
+    color: #333;
+}
+
+.projects_item_text {
+    font-size: 16px;
+    color: #ACACAC;
+}
+
+
+.projects_item_button {
+    background-color: #333;
+    color: #FFF;
+}
+
+.projects_services {
+    margin-top: 20px;
+    background-color: #F2F2EA;
+}
+
+/* members */
+
+.members_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+}
+
+
+/* blog */
+
+.blog_container {
+    background-color: #F2F2EA
+}
+
+.blog_button {
+    background-color: #333;
+    color: #FFF;
+}
+
+/* contact */
+
+.contact_container {
+    background-color: #333;
+    color: #FFF;
+}
+
+.contact_button {
+    background-color: #FFF;
+    color: #333;
+}
+
+
+@media screen and (max-width: 1180px) {
+    .inner {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
