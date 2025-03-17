@@ -38,8 +38,45 @@ body {
 
 .button {
     border-radius: 100px;
+    font-size: 14px;
     font-weight: bold;
-    padding: 20px 40px; 
+    padding: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: end;
+    gap: 8px;
+    width: 200px;
+}
+
+.button_arrow {
+    font-size: 12px;
+    margin-left: 25px;
+}
+
+/* header */
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_right_container {
+    display: flex;
+    align-items: center;
+    padding: 16.5px 0;
+}
+
+.header_menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.header_menu_link {
+    font-family: 'Outfit', sans-serif;
+    margin-right: 36px;
 }
 
 /* inner */
@@ -50,11 +87,16 @@ body {
 }
 
 /* fv */
+.fv {
+    margin-top: 40px;
+}
+
 .fv_container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
     gap: 20px;
+    margin: 0 60px;
 }
 
 .fv_headline {
@@ -76,27 +118,30 @@ body {
 
 .fv_left {
     width: 380px;
+    margin-bottom: 0px;
 }
 
 .fv_center {
     width: 420px;
+    margin-bottom: 40px;
 }
 
 .fv_right {
     width: 380px;
+    margin-bottom: 80px;
 }
 
 .fv_img {
     display: block;
-    height: 100%;
-    width: 100%;
+    height: 700px; /* 縦幅を固定 */
+    width: auto; /* 横幅を自動調整して縦横比を維持 */
     object-fit: cover;
     border-radius: 30px;
 }
 
 /* mission */
 .mission {
-    /* padding: 120px 0; */
+    margin-top: 130px;
 }
 
 .mission_container {
@@ -153,10 +198,14 @@ body {
 
 /* strengths */
 
+.strengths {
+    margin-top: 100px;
+    padding-bottom: 130px;
+}
+
 .strengths_container {
     display: flex;
     justify-content: space-between;
-    margin-top: 80px;
 }
 
 .strengths_text {
@@ -170,6 +219,19 @@ body {
     width: 500px;
     height: 500px;
     position: relative;
+}
+
+.element {
+    top: 50%;
+    left: 50%;
+    font-family: 'Outfit', sans-serif;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #333;
+    opacity: 0.1;
 }
 
 .strengths_triangle_center {
@@ -225,13 +287,14 @@ body {
 .services {
     background-color: #333;
     color: #FFF;
+    border-radius: 30px;
+    padding: 100px 0 130px;
 }
 
 .services_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 80px;
 }
 
 .services_button {
@@ -241,18 +304,24 @@ body {
 
 .services_title {
     font-size: 28px;
-    margin-bottom: 20px;
+    margin: 60px 100px 40px;
+}
+
+.services_text {
+    font-size: 20px;
+    margin: 0 100px;
 }
 
 .services_grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: 1fr 1fr; /* 2列の固定レイアウト */
+    gap: 40px 80px; /* 縦 40px, 横 80px の間隔を設定 */
+    margin-top: 60px;
 }
 
-.services_grid > div {
+.services_grid_item {
     padding: 20px;
-    border-radius: 8px;      /* 角丸（必要に応じて） */
+    border-bottom: 1px solid #FFF;
 }
 
 .services_number {
@@ -270,6 +339,9 @@ body {
 }
 
 /* projects */
+.projects {
+    padding: 130px 0; 
+}
 
 .projects_item {
     display: flex;
@@ -288,6 +360,11 @@ body {
     color: #ACACAC;
 }
 
+.projects_item_description {
+    font-size: 16px;
+    color: #333;
+    margin: 28px 0 40px;
+}
 
 .projects_item_button {
     background-color: #333;
@@ -295,11 +372,40 @@ body {
 }
 
 .projects_services {
-    margin-top: 20px;
+    margin-top: 40px;
     background-color: #F2F2EA;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.projects_services-title {
+    font-size: 18px;
+}
+
+.projects_service-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* 2列のグリッド */
+    row-gap: 10px;                          /* 行間の余白 */
+    column-gap: 30px;                       /* 列間の余白 */
+    padding-left: 20px;                     /* リストマーカーのためのスペース */
+}
+
+.projects_service-list li {
+    list-style-type: disc;                  /* ・マーカーを表示 */
+    color: #333;                            /* マーカーの色 */
+}
+
+.projects_service-list li p {
+    font-size: 14px;
+    margin: 0;                              /* pタグのデフォルトマージンを削除 */
+    padding: 5px 0;                         /* 上下の内部余白 */
 }
 
 /* members */
+
+.members {
+    padding-bottom: 100px;
+}
 
 .members_container {
     display: flex;
@@ -308,11 +414,81 @@ body {
     margin-top: 80px;
 }
 
+.members_items {
+    display: flex;
+    justify-content: start;
+    gap: 40px;
+    margin: 60px 0  40px;
+}
+
+.members_item {
+    background-color: #FFF;
+    border-radius: 30px;
+    width: 385px;
+    height: 385px;
+    padding: 40px;
+    position: relative;
+}
+
+.members_item_odd {
+    margin-top: 40px;
+}
+
+.members_item_number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+}
+
+.members_item_img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 30px;
+    margin: 0 auto;
+}
+
+.members_item_text {
+    width: fit-content;
+    margin: 12px auto 0;
+}
+
+.members_item_position, .members_item_role {
+    line-height: 1.6;
+}
+
+.members_item_name {
+    font-size: 36px;
+    font-family: 'Outfit', sans-serif;
+}
 
 /* blog */
 
 .blog_container {
-    background-color: #F2F2EA
+    display: flex;
+    justify-content: space-between;
+    gap: 95px;
+}
+
+.blog_container_left {
+    background-color: #F2F2EA;
+    width: 45%;
+    height: 583px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding-top: 60px;
+}
+
+.blog_container_left_top {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.blog_container_left_top_text {
+    margin-bottom: 60px;
 }
 
 .blog_button {
@@ -320,16 +496,97 @@ body {
     color: #FFF;
 }
 
+.blog_items {
+    padding: 56px 0;
+}
+
+.blog_item {
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 130px;
+}
+
+.blog_item_text_top {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.blog_item_date {
+    font-size: 14px;
+}
+
+.blog_item_category {
+    font-size: 14px;
+    background-color: #F7E40B;
+    border-radius: 20px;
+    padding: 4px 12px;
+    margin-left: 20px;
+}
+
+.blog_item_title {
+    font-size: 18px;
+    padding: 20px 0 40px;
+}
+
 /* contact */
 
-.contact_container {
-    background-color: #333;
+.contact {
+    /* background-color: #333; */
+    background-image: url("./images/contact_image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 583px;
     color: #FFF;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+}
+
+.contact_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1160px;
+    padding: auto;
+    padding-top: 250px;
 }
 
 .contact_button {
     background-color: #FFF;
     color: #333;
+}
+
+/* footer */
+
+.footer {
+    background-color: #333;
+    color: #FFF;
+    padding: 100px 0;
+}   
+
+.footer_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2列のグリッド */
+    column-gap: 120px; /* 横の間隔を120pxに設定 */
+    row-gap: 40px; /* 縦の間隔を40pxに設定 */
+}
+
+.footer_menu_item_title {
+    font-size: 32px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.footer_menu_item_text {
+    font-size: 12px;
 }
 
 
