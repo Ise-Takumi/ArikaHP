@@ -1,0 +1,154 @@
+/* 共通 */
+.about_title {
+    font-size: 64px;
+    font-weight: 500;
+}
+
+.subtitle_point {
+    display: inline-block;
+    background-color: #F7E40B;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.section_text {
+    margin-top: 60px;
+    width: 60%;
+}
+
+.section_text_title {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 160%;
+}
+
+.section_text_description { 
+    font-size: 20px;
+    line-height: 180%;
+    margin-top: 32px;
+}
+
+/* fv */
+.fv {
+    margin-top: 100px;
+}
+
+.fv_title {
+    font-size: 120px;
+    font-weight: 700;
+}
+
+.fv_subtitle {
+    font-size: 14px;
+    width: fit-content;
+    line-height: 30px;
+    height: 30px;
+}
+
+.fv_img {
+    margin-top: 60px;
+    border-radius: 10px;
+}
+
+/* mission */
+.mission {
+    margin-top: 130px;
+}
+.mission_inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* vision */
+.vision {
+    margin-top: 100px;
+}
+
+.vision_inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* values */
+.values {
+    margin-top: 130px;
+
+}
+
+.values_background {
+    background-color: #333333;
+    color: #ffffff;
+    padding-block: 100px 240px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.values_items {
+    margin-top: -200px;
+    width: calc(100% + 160px);
+    background-color: #ffffff;
+    color: #333333;
+    padding: 40px 0 80px 130px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.values_item {
+    padding-block: 40px;
+    border-bottom: 1px solid #333333;
+}
+
+.values_item_title {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 160%;
+}
+
+.values_item_description {
+    font-size: 14px;
+    line-height: 180%;
+    margin-top: 32px;
+}
+
+/* company */
+.company {
+    margin-block: 130px;
+}
+
+.company_items {
+    width: 80%;
+    margin-left: auto;
+}
+
+.company_item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.company_item_text {
+    line-height: 160%;
+}
+
+.company_item_label {
+    width: 20%;
+    border-bottom: 2px solid #ACACAC;
+    padding-block: 32px;
+}
+
+.company_item_value {
+    text-align: left;
+    width: 80%;
+    border-bottom: 2px solid #DDDDDD;
+    padding-block: 32px;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="destyle.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="contact.css">
+    <!-- Noto sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Noto+Sans+JP:wght@100&family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+    <!-- Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Noto+Sans+JP:wght@100&family=Outfit:wght@100..900&family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <img src="./images/Ellipse5.png" alt="" class="header_background">
+        <div class="header_container">
+            <img src="./images/logo.png" alt="">
+            <div class="header_right_container">
+                <div>
+                    <ul class="header_menu">
+                        <li class="header_menu_link">About us</li>
+                        <li class="header_menu_link">Services</li>
+                        <li class="header_menu_link">Detail</li>
+                        <li class="header_menu_link">Blog</li>
+                        <li class="header_menu_link">Contact</li>
+                    </ul>
+                </div>
+                <img src="./images/icon.png" alt="">
+            </div>
+        </div>
+    </header>
+    <section class="fv">
+        <div class="fv_inner inner">
+            <h1 class="fv_title page_title">Contact</h1>
+            <p class="fv_subtitle"><span class="fv_subtitle_point subtitle_point"></span>お問い合わせ</p>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="contact_inner inner">
+            <p class="contact_text">
+                お問い合わせは下記フォームよりご連絡ください。<br>
+                内容を確認し、折り返しご連絡させていただきます。
+            </p>
+            <div class="contact_form_container">
+                <form class="contact_form">
+                    <div class="form_group">
+                        <label for="name">お名前 <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required placeholder="例：山田 太郎">
+                    </div>
+                    <div class="form_group">
+                        <label for="email">メールアドレス <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="例：example@example.com">
+                    </div>
+                    <div class="form_group">
+                        <label for="company">会社名</label>
+                        <input type="text" id="company" name="company" placeholder="例：株式会社アリカ">
+                    </div>
+                    <div class="form_group">
+                        <label for="inquiry_type">お問い合わせ種別 <span class="required">*</span></label>
+                        <select id="inquiry_type" name="inquiry_type" required>
+                            <option value="">選択してください</option>
+                            <option value="web">Webサイト制作</option>
+                            <option value="sns">SNSマーケティング</option>
+                            <option value="ai">AIマーケティング</option>
+                            <option value="system">システム開発</option>
+                            <option value="other">その他</option>
+                        </select>
+                    </div>
+                    <div class="form_group">
+                        <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="6" required placeholder="お問い合わせ内容をご記入ください"></textarea>
+                    </div>
+                    <div class="form_group checkbox_group">
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <label for="privacy">プライバシーポリシーに同意する <span class="required">*</span></label>
+                    </div>
+                    <button type="submit" class="button contact_form_button">
+                        <span>送信する</span>
+                        <span class="button_arrow">→</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="inner">
+                <div class="footer_container">
+                    <div>
+                        <img src="" alt="">
+                        <div>
+                            <p>株式会社アリカ</p>
+                            <p>〒651-0084</p>
+                            <p>兵庫県神戸市中央区磯辺通1丁目20-505</p>
+                        </div>
+                    </div>
+                    <div class="footer_menu">
+                        <div class="footer_menu_item">
+                            <h4 class="footer_menu_item_title">About us</h4>
+                            <p class="footer_menu_item_text">私たちについて</p>
+                        </div>
+                        <div class="footer_menu_item">
+                            <h4 class="footer_menu_item_title">Services</h4>
+                            <p class="footer_menu_item_text">事業内容</p>
+                        </div>
+                        <div class="footer_menu_item">
+                            <h4 class="footer_menu_item_title">Plan</h4>
+                            <p class="footer_menu_item_text">料金プラン</p>
+                        </div>
+                        <div class="footer_menu_item">
+                            <h4 class="footer_menu_item_title">Projects</h4>
+                            <p class="footer_menu_item_text">プロジェクト</p>
+                        </div>
+                        <div class="footer_menu_item">
+                            <h4 class="footer_menu_item_title">Member</h4>
+                            <p class="footer_menu_item_text">メンバー紹介</p>
+                        </div>
+                        <div class="footer_menu_item">
+                            <h4 class="footer_menu_item_title">Blog</h4>
+                            <p class="footer_menu_item_text">ブログ</p>
+                        </div>
+                        <div class="footer_menu_item">   
+                            <h4 class="footer_menu_item_title">Contact</h4>
+                            <p class="footer_menu_item_text">お問い合わせ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>       
+    <script src="function.js"></script>
+</body>
+</html>
