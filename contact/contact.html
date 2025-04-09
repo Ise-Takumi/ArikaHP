@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="destyle.css">
+    <link rel="stylesheet" href="../destyle.css">
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="contact.css">
     <!-- Noto sans -->
@@ -16,26 +16,26 @@
 </head>
 <body>
     <header class="header">
-        <img src="./images/Ellipse5.png" alt="" class="header_background">
+        <img src="../images/Ellipse6.png" alt="" class="header_background">
         <div class="header_container">
-            <img src="./images/logo.png" alt="">
+            <img src="../images/logo.png" alt="" class="header_logo">
             <div class="header_right_container">
                 <div>
                     <ul class="header_menu">
-                        <li class="header_menu_link">About us</li>
-                        <li class="header_menu_link">Services</li>
-                        <li class="header_menu_link">Detail</li>
-                        <li class="header_menu_link">Blog</li>
-                        <li class="header_menu_link">Contact</li>
+                        <li class="header_menu_link"><a href="../about/about.html">About us</a></li>
+                        <li class="header_menu_link"><a href="../service/service.html">Services</a></li>
+                        <li class="header_menu_link"><a href="../detail/detail.html">Detail</a></li>
+                        <li class="header_menu_link"><a href="../blog/blog.html">Blog</a></li>
+                        <li class="header_menu_link"><a href="../contact/contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <img src="./images/icon.png" alt="">
+                <img src="../images/icon.png" alt="" class="header_icon">
             </div>
         </div>
     </header>
     <section class="fv">
         <div class="fv_inner inner">
-            <h1 class="fv_title page_title">Contact</h1>
+            <h1 class="fv_title">Contact</h1>
             <p class="fv_subtitle"><span class="fv_subtitle_point subtitle_point"></span>お問い合わせ</p>
         </div>
     </section>
@@ -49,32 +49,51 @@
                 <form class="contact_form">
                     <div class="form_group">
                         <label for="name">お名前 <span class="required">*</span></label>
-                        <input type="text" id="name" name="name" required placeholder="例：山田 太郎">
+                        <input type="text" id="name" name="name" required placeholder="山田 太郎">
+                    </div>
+                    <div class="form_group">
+                        <label for="company">会社名 <span class="required">*</span></label>
+                        <input type="text" id="company" name="company" required placeholder="株式会社アリカ">
                     </div>
                     <div class="form_group">
                         <label for="email">メールアドレス <span class="required">*</span></label>
-                        <input type="email" id="email" name="email" required placeholder="例：example@example.com">
+                        <input type="email" id="email" name="email" required placeholder="example@example.com">
                     </div>
                     <div class="form_group">
-                        <label for="company">会社名</label>
-                        <input type="text" id="company" name="company" placeholder="例：株式会社アリカ">
+                        <label for="tel">電話番号</label>
+                        <input type="text" id="tel" name="tel" placeholder="08012345678">
                     </div>
                     <div class="form_group">
-                        <label for="inquiry_type">お問い合わせ種別 <span class="required">*</span></label>
-                        <select id="inquiry_type" name="inquiry_type" required>
-                            <option value="">選択してください</option>
-                            <option value="web">Webサイト制作</option>
-                            <option value="sns">SNSマーケティング</option>
-                            <option value="ai">AIマーケティング</option>
-                            <option value="system">システム開発</option>
-                            <option value="other">その他</option>
-                        </select>
+                        <label for="inquiry_type">ご興味のあるサービス<span class="supplement-title">※複数選択可能</span></label>
+                        <div class="checkbox_group">
+                            <div class="checkbox_item">
+                                <input type="checkbox" id="inquiry_web" name="inquiry_type[]" value="web">
+                                <label for="inquiry_web">個別無料相談<span class="supplement">（「まずは気軽に相談してみたい」という方はこちらを選んでください。）</span></label>
+                            </div>
+                            <div class="checkbox_item">
+                                <input type="checkbox" id="inquiry_sns" name="inquiry_type[]" value="sns">
+                                <label for="inquiry_sns">クリエイティブ<span class="supplement">（Webサイト・LP制作/コンテンツ作成 など）</span></label>
+                            </div>
+                            <div class="checkbox_item">
+                                <input type="checkbox" id="inquiry_ai" name="inquiry_type[]" value="ai">
+                                <label for="inquiry_ai">SNSマーケティング<span class="supplement">（PR代行/運用代行/キャスティング/イベント企画 など）</span></label>
+                            </div>
+                            <div class="checkbox_item">
+                                <input type="checkbox" id="inquiry_system" name="inquiry_type[]" value="system">
+                                <label for="inquiry_system">AIマーケティング<span class="supplement">（AIを活用したSEO対策などのマーケティング施策 など）</span></label>
+                            </div>
+                            <div class="checkbox_item">
+                                <input type="checkbox" id="inquiry_other" name="inquiry_type[]" value="other">
+                                <label for="inquiry_other">システム・アプリ開発<span class="supplement">（ios, Androidアプリ制作/AI技術開発/その他システム開発 など）</span></label>
+                            </div>
+                        </div>
                     </div>
                     <div class="form_group">
                         <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+                        <p>※業種や現在の課題、参考サイト等を記入いただくとお話がスムーズに進みます。</p>
                         <textarea id="message" name="message" rows="6" required placeholder="お問い合わせ内容をご記入ください"></textarea>
                     </div>
-                    <div class="form_group checkbox_group">
+                    <div class="form_group checkbox_group-privacy">
                         <input type="checkbox" id="privacy" name="privacy" required>
                         <label for="privacy">プライバシーポリシーに同意する <span class="required">*</span></label>
                     </div>
@@ -132,6 +151,6 @@
             </div>
         </div>
     </footer>       
-    <script src="function.js"></script>
+    <script src="../function.js"></script>
 </body>
 </html>

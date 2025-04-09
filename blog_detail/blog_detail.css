@@ -1,7 +1,20 @@
-/* 共通 */
-.page_title {
-    font-size: 64px;
+/* fv */   
+.fv {
+    margin-top: 100px;
+}
+
+.fv_title {
+    font-size: 120px;
     font-weight: 500;
+    font-family: 'Outfit', sans-serif;
+    color: #333;
+}
+
+.fv_subtitle {
+    font-size: 14px;
+    width: fit-content;
+    line-height: 30px;
+    height: 30px;
 }
 
 .subtitle_point {

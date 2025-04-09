@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="destyle.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../destyle.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="top.css">
     <!-- Noto sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,20 +16,20 @@
 </head>
 <body>
     <header class="header">
-        <img src="./images/Ellipse5.png" alt="" class="header_background">
+        <img src="../images/Ellipse5.png" alt="" class="header_background-top">
         <div class="header_container">
-            <img src="./images/logo.png" alt="">
+            <img src="../images/logo.png" alt="" class="header_logo">
             <div class="header_right_container">
                 <div>
                     <ul class="header_menu">
-                        <li class="header_menu_link">About us</li>
-                        <li class="header_menu_link">Services</li>
-                        <li class="header_menu_link">Detail</li>
-                        <li class="header_menu_link">Blog</li>
-                        <li class="header_menu_link">Contact</li>
+                        <li class="header_menu_link"><a href="../about/about.html">About us</a></li>
+                        <li class="header_menu_link"><a href="../service/service.html">Services</a></li>
+                        <li class="header_menu_link"><a href="../detail/detail.html">Detail</a></li>
+                        <li class="header_menu_link"><a href="../blog/blog.html">Blog</a></li>
+                        <li class="header_menu_link"><a href="../contact/contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <img src="./images/icon.png" alt="">
+                <img src="../images/icon.png" alt="" class="header_icon">
             </div>
         </div>
     </header>
@@ -39,9 +39,9 @@
             <p class="fv_text">わがままを言える世界を創る</p>
         </div>
         <div class="fv_container">
-            <img src="./images/fv_left.png" alt="" class="fv_img fv_left">
-            <img src="./images/fv_center.png" alt="" class="fv_img fv_center">
-            <img src="./images/fv_right.png" alt="" class="fv_img fv_right">
+            <img src="../images/fv_left.png" alt="" class="fv_img fv_left">
+            <img src="../images/fv_center.png" alt="" class="fv_img fv_center">
+            <img src="../images/fv_right.png" alt="" class="fv_img fv_right">
         </div>
     </section>
     <section class="mission">
@@ -52,15 +52,18 @@
             </div>
             <div class="mission_container">
                 <div class="mission_img">
-                    <img src="./images/mission_bigger.png" alt="" class="mission_img_bigger">
-                    <img src="./images/mission_smaller.png" alt="" class="mission_img_smaller">
+                    <img src="../images/mission_bigger.png" alt="" class="mission_img_bigger">
+                    <img src="../images/mission_smaller.png" alt="" class="mission_img_smaller">
                 </div>
                 <div class="mission_description">
                     <h3 class="mission_title">世界をもっとわがままに。</h3>
                     <p class="mission_text">会社の成長が社会貢献につながるという信念のもと、<br>一人ひとりが生き生きと力を発揮すれば、<br>サービスの質は向上します。<br>結果として、顧客満足度も上がるはずです。<br>「社員からお客様や社会へ」幸せを波及させることを目指し、<br>たくさんの『ありたい』を叶えます</p>
                     <button class="button mission_button">
+                        <span class="button_arrow-left">
+                            →
+                        </span>
                         <span>私たちについて</span>
-                        <span class="button_arrow">
+                        <span class="button_arrow-right">
                             →
                         </span>
                     </button>
@@ -140,9 +143,9 @@
                 <p class="section_text">プロジェクト</p>
             </div>
             <div class="projects_items">
-                <div class="projects_item">
-                    <img src="./images/Rectangle 69.png" alt="">
-                    <div>
+                <img src="../images/Rectangle69.png" alt="" class="projects_img">
+                <div>
+                    <div class="projects_item">
                         <h3 class="projects_item_title">クリエイティブ</h3>
                         <p class="projects_item_text">Creative</p>
                         <p class="projects_item_description">HPに必要な動画・画像制作等を承ります。<br>名刺やチラシなどの作成も承ります。</p>
@@ -164,10 +167,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="projects_item">
-                    <img src="./images/Rectangle 69.png" alt="">
-                    <div>
+                    <div class="projects_item">
                         <h3 class="projects_item_title">SNSマーケティング</h3>
                         <p class="projects_item_text">Social Media Marketing</p>
                         <p class="projects_item_description">SNSの強みを活用したイベント企画も行っております。</p>
@@ -189,10 +189,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="projects_item">
-                    <img src="./images/Rectangle 69.png" alt="">
-                    <div>
+                    <div class="projects_item">
                         <h3 class="projects_item_title">AIマーケティング</h3>
                         <p class="projects_item_text">AI Marketing</p>
                         <p class="projects_item_description">AIを活用したSEO対策などのマーケティング施策</p>
@@ -214,10 +211,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="projects_item">
-                    <img src="./images/Rectangle 69.png" alt="">
-                    <div>
+                    <div class="projects_item">
                         <h3 class="projects_item_title">システム・アプリ開発</h3>
                         <p class="projects_item_text">Software Development</p>
                         <p class="projects_item_description">ios,Androidアプリ制作/AI技術開発/その他システム開発<br>あなたの気持ちに寄り添います。</p>
@@ -255,7 +249,7 @@
             <div class="members_items">
                 <div class="members_item members_item_odd">
                     <p class="members_item_number">01</p>
-                    <img src="./images/Ellipse15.png" alt="" class="members_item_img">
+                    <img src="../images/Ellipse15.png" alt="" class="members_item_img">
                     <div class="members_item_text">
                         <p class="members_item_position">代表取締役 / CEO</p>
                         <p class="members_item_name">tarou tanaka</p>
@@ -264,7 +258,7 @@
                 </div>
                 <div class="members_item members_item_even">
                     <p class="members_item_number">02</p>
-                    <img src="./images/Ellipse15.png" alt="" class="members_item_img">
+                    <img src="../images/Ellipse15.png" alt="" class="members_item_img">
                     <div class="members_item_text">
                         <p class="members_item_position">代表取締役 / CEO</p>
                         <p class="members_item_name">tarou tanaka</p>
@@ -386,6 +380,6 @@
             </div>
         </div>
     </footer>    
-    <script src="function.js"></script>
+    <script src="../function.js"></script>
 </body>
 </html>

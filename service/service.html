@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="destyle.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../destyle.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="service.css">
     <!-- Noto sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,20 +16,20 @@
 </head>
 <body>
     <header class="header">
-        <img src="./images/Ellipse5.png" alt="" class="header_background">
+        <img src="../images/Ellipse6.png" alt="" class="header_background">
         <div class="header_container">
-            <img src="./images/logo.png" alt="">
+            <img src="../images/logo.png" alt="" class="header_logo">
             <div class="header_right_container">
                 <div>
                     <ul class="header_menu">
-                        <li class="header_menu_link">About us</li>
-                        <li class="header_menu_link">Services</li>
-                        <li class="header_menu_link">Detail</li>
-                        <li class="header_menu_link">Blog</li>
-                        <li class="header_menu_link">Contact</li>
+                        <li class="header_menu_link"><a href="../about/about.html">About us</a></li>
+                        <li class="header_menu_link"><a href="../service/service.html">Services</a></li>
+                        <li class="header_menu_link"><a href="../detail/detail.html">Detail</a></li>
+                        <li class="header_menu_link"><a href="../blog/blog.html">Blog</a></li>
+                        <li class="header_menu_link"><a href="../contact/contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <img src="./images/icon.png" alt="">
+                <img src="../images/icon.png" alt="" class="header_icon">
             </div>
         </div>
     </header>
@@ -41,16 +41,16 @@
             </div>
             <div class="fv_contact_circle" id="fv_contact_circle">
                 <p>ご依頼やご相談は<br>こちらから</p>
-                <button class="button fv_button">お問い合わせ →</button>
+                <button class="button fv_button"><a href="../contact/contact.html">お問い合わせ →</a></button>
             </div>
-            <img src="./images/service_fv.png" alt="" class="fv_img">
+            <img src="../images/service_fv.png" alt="" class="fv_img">
         </div>
     </section>
     <section class="strengths">
         <div class="strengths_inner inner">
             <div class="strengths_left">
                 <div>
-                    <h2 class="page_title strengths_title">Our Strengths</h2>
+                    <h2 class="strengths_title">Our Strengths</h2>
                     <p><span class="strengths_title_point subtitle_point"></span>私たちの強み</p>
                 </div>
                 <p class="strengths_text">私たちは、総合Webマーケティングの会社です。<br>企業が得意分野で本領を発揮するために、<br>「クリエイティブ事業」「AI事業」「SNS事業」の3つのサービスを主軸として<br>あなたのビジネスをサポートします。</p>
@@ -73,8 +73,8 @@
             </div>
         </div>
     </section>
-    <section class="services">
-        <div class="service service_01">
+    <section class="services" id="services">
+        <div class="service service_01 fade-in">
             <div class="service_inner inner">
                 <div class="service_text service_text_01">
                     <h3 class="service_title">Webサイト・LP制作</h3>
@@ -85,9 +85,9 @@
                 </div>
                 <button class="service_button">詳しく見る</button>
             </div>
-            <img src="./images/service_example.png" alt="" class="service_example">
+            <img src="../images/service_example.png" alt="" class="service_example">
         </div>
-        <div class="service service_02">
+        <div class="service service_02 fade-in">
             <div class="service_inner inner">   
                 <div class="service_text service_text_02">
                     <h3 class="service_title">SNSマーケティング</h3>
@@ -98,9 +98,9 @@
                 </div>
                 <button class="service_button">詳しく見る</button>
             </div>
-            <img src="./images/service_example.png" alt="" class="service_example">
+            <img src="../images/service_example.png" alt="" class="service_example">
         </div>
-        <div class="service service_03">
+        <div class="service service_03 fade-in">
             <div class="service_inner inner">
                 <div class="service_text service_text_03">
                     <h3 class="service_title">AIマーケティング</h3>
@@ -112,9 +112,9 @@
                 </div>
                 <button class="service_button">詳しく見る</button>
             </div>
-            <img src="./images/service_example.png" alt="" class="service_example">
+            <img src="../images/service_example.png" alt="" class="service_example">
         </div>
-        <div class="service service_04">
+        <div class="service service_04 fade-in">
             <div class="service_inner inner">
                 <div class="service_text service_text_04">
                     <h3 class="service_title">システム・アプリ開発</h3>
@@ -125,7 +125,7 @@
                 </div>
                 <button class="service_button">詳しく見る</button>
             </div>
-            <img src="./images/service_example.png" alt="" class="service_example">
+            <img src="../images/service_example.png" alt="" class="service_example">
         </div>
     </section>
     <footer>
@@ -190,6 +190,6 @@
             </div>
         </div>
     </footer>       
-    <script src="function.js"></script>
+    <script src="../function.js"></script>
 </body>
 </html>
