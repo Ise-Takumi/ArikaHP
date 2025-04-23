@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../destyle.css">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/destyle.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="blog_detail.css">
     <!-- Noto sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,20 +16,25 @@
 </head>
 <body>
     <header class="header">
-        <img src="../images/Ellipse6.png" alt="" class="header_background">
+        <img src="/images/Ellipse6.png" alt="" class="header_background">
         <div class="header_container">
-            <img src="../images/logo.png" alt="" class="header_logo">
+            <a href="/index.html"><img src="/images/logo.png" alt="" class="header_logo"></a>
             <div class="header_right_container">
-                <div>
+                <button class="hamburger_button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="header_menu_container">
                     <ul class="header_menu">
-                        <li class="header_menu_link"><a href="../about/about.html">About us</a></li>
-                        <li class="header_menu_link"><a href="../service/service.html">Services</a></li>
-                        <li class="header_menu_link"><a href="../detail/detail.html">Detail</a></li>
-                        <li class="header_menu_link"><a href="../blog/blog.html">Blog</a></li>
-                        <li class="header_menu_link"><a href="../contact/contact.html">Contact</a></li>
+                        <li class="header_menu_link"><a href="/about/about.html">About us</a></li>
+                        <li class="header_menu_link"><a href="/service/service.html">Services</a></li>
+                        <li class="header_menu_link"><a href="/detail/detail.html">Detail</a></li>
+                        <li class="header_menu_link"><a href="/blog/blog.html">Blog</a></li>
+                        <li class="header_menu_link"><a href="/contact/contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <img src="../images/icon.png" alt="" class="header_icon">
+                <img src="/images/icon.png" alt="" class="header_icon">
             </div>
         </div>
     </header>
@@ -56,13 +61,13 @@
                     <p class="blog_detail_info_category">カテゴリ1</p>
                 </div>
                 <div class="blog_detail_content">
-                    <h2 class="blog_detail_content_title_large">大見出しがはいります大見出しがはいります</h2>
-                    <img src="../images/blog_detail.png" alt="" class="blog_detail_content_img">
+                    <h1 class="blog_detail_content_title_large">大見出しがはいります大見出しがはいります</h1>
+                    <img src="/images/blog_detail.png" alt="" class="blog_detail_content_img">
                     <p class="blog_detail_content_text_large">テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります</p>
-                    <h3 class="blog_detail_content_title_middle">中見出しがはいります中見出しがはいります</h3>
+                    <h2 class="blog_detail_content_title_middle">中見出しがはいります中見出しがはいります</h2>
                     <p class="blog_detail_content_text_middle">テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります</p>
                     <p class="blog_detail_content_text_middle">テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります</p>
-                    <h4 class="blog_detail_content_title_short">小見出しがはいります小見出しがはいります</h4>
+                    <h3 class="blog_detail_content_title_short">小見出しがはいります小見出しがはいります</h3>
                     <p class="blog_detail_content_text_short">テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります</p>
                     <p class="blog_detail_content_text_short">テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります</p>
                 </div>
@@ -131,6 +136,6 @@
             </div>
         </div>
     </footer>       
-    <script src="../function.js"></script>
+    <script type="module" src="/js/main.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
     font-weight: 500;
     font-family: 'Outfit', sans-serif;
     font-family: 'Outfit', sans-serif;
-    background-image: url("../images/Ellipse6.png");
+    background-image: url("/images/Ellipse6.png");
     background-position: left top;
     background-repeat: no-repeat;
     background-size: 180px 100px;
@@ -14,6 +14,12 @@
 
     /* Firefox対応 */
     background-clip: text;
+}
+
+@media screen and (max-width: 1024px) {
+    .about_title {
+        font-size: 48px;
+    }
 }
 
 .subtitle_point {
@@ -37,6 +43,12 @@
     line-height: 160%;
 }
 
+@media screen and (max-width: 1024px) {
+    .section_text_title {
+        font-size: 32px;
+    }
+}
+
 .section_text_description { 
     font-size: 20px;
     line-height: 180%;
@@ -55,6 +67,18 @@
     color: #333;
 }
 
+@media screen and (max-width: 1024px) {
+    .fv_title {
+        font-size: 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .fv_title {
+        font-size: 64px;
+    }
+}
+
 .fv_subtitle {
     font-size: 14px;
     width: fit-content;
@@ -65,6 +89,9 @@
 .fv_img {
     margin-top: 60px;
     border-radius: 10px;
+    width: 100%;
+    margin-inline: auto;
+    max-width: 1160px;
 }
 
 /* mission */
@@ -76,6 +103,24 @@
     justify-content: space-between;
 }
 
+@media screen and (max-width: 768px) {
+    .mission_inner {
+        flex-direction: column;
+    }
+
+    .mission_text {
+        width: 100%;
+    }
+
+    .mission_text_title {
+        font-size: 24px;
+    }
+
+    .mission_text_description {
+        font-size: 16px;
+    }
+}
+
 /* vision */
 .vision {
     margin-top: 100px;
@@ -84,6 +129,24 @@
 .vision_inner {
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+    .vision_inner {
+        flex-direction: column;
+    }
+    
+    .vision_text {
+        width: 100%;
+    }
+
+    .vision_text_title {
+        font-size: 24px;
+    }
+
+    .vision_text_description {
+        font-size: 16px;
+    }
 }
 
 
@@ -106,18 +169,38 @@
 
 .values_items {
     margin-top: -200px;
-    width: calc(100% - 160px);
+    width: min(calc(100% - 160px), calc(100vw - (100vw - 1180px) / 2));
     background-color: #ffffff;
     color: #333333;
-    padding: 40px 0 80px 130px;
+    padding: 40px 0 80px min(130px, 10%);
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     margin-left: auto;
 }
 
+@media screen and (max-width: 1024px) {
+    .values_items {
+        width: 95vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .values_items {
+        width: 100%;
+        border-radius: 30px;
+        padding-inline: 5%;
+    }
+}
+
 .values_item {
     padding-block: 40px;
     border-bottom: 1px solid #333333;
+}
+
+@media screen and (max-width: 1024px) {
+    .values_item {
+        padding-block: 30px;
+    }
 }
 
 .values_item_title {
@@ -126,10 +209,28 @@
     line-height: 160%;
 }
 
+@media screen and (max-width: 1024px) {
+    .values_item_title {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .values_item_title {
+        font-size: 24px;
+    }
+}
+
 .values_item_description {
     font-size: 14px;
     line-height: 180%;
     margin-top: 32px;
+}
+
+@media screen and (max-width: 768px) {
+    .values_item_description {
+        font-size: 16px;
+    }
 }
 
 /* company */

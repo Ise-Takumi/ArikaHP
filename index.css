@@ -2,14 +2,9 @@
 .fv {
     margin-top: 40px;
     position: relative;
-}
-
-.fv_container {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    gap: 20px;
-    margin: 0 60px;
+    max-width: 1320px;
+    margin-inline: auto;
+    width: 90%;
 }
 
 .fv_headline {
@@ -19,13 +14,20 @@
     z-index: 2;
 }
 
+.fv_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+}
+
 .fv_title {
     background-color: #fff;
     font-size: 88px;
     font-weight: 700;
     /* color: #FFF; */
     font-family: 'Outfit', sans-serif;
-    background-image: url("../images/Ellipse6.png");
+    background-image: url("/images/Ellipse6.png");
     background-position: left top;
     background-repeat: no-repeat;
     background-size: 600px 200px;
@@ -59,7 +61,8 @@
 
 .fv_img {
     display: block;
-    height: 700px; /* 縦幅を固定 */
+    max-height: 700px;
+    height: 48vw; /* 縦幅を固定 */
     width: auto; /* 横幅を自動調整して縦横比を維持 */
     object-fit: cover;
     border-radius: 30px;
@@ -73,7 +76,7 @@
 }
 
 .mission::before {
-    background-image: url("../images/Ellipse6.png");
+    background-image: url("/images/Ellipse6.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -101,20 +104,24 @@
 }
 
 .mission_img_bigger {
-    width: 480px;
-    height: 480px;
+    max-width: 480px;
+    max-height: 480px;
     object-fit: cover;
     border-radius: 30px;
+    width: calc(480 / 1440 * 100vw);
+    height: calc(480 / 1440 * 100vw);
 }
 
 .mission_img_smaller {
-    width: 280px;
-    height: 280px;
+    max-width: 294px;
+    max-height: 189px;
     object-fit: cover;
     border-radius: 30px;
     position: absolute;
-    right: 0;
-    bottom: 0;
+    left: min(calc(300 / 1440 * 100vw), 300px);
+    top: min(calc(380 / 1440 * 100vw), 400px);
+    width: calc(294 / 1440 * 100vw);
+    height: calc(189 / 1440 * 100vw);
 }
 
 .mission_description {
@@ -163,7 +170,7 @@
 }
 
 .strengths_triangle::before {
-    background-image: url("../images/Ellipse7.png");
+    background-image: url("/images/Ellipse7.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -300,7 +307,7 @@
 }
 
 .projects::before {
-    background-image: url("../images/Ellipse6.png");
+    background-image: url("/images/Ellipse6.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -415,7 +422,7 @@
 }
 
 .members::before {
-    background-image: url("../images/Ellipse6.png");
+    background-image: url("/images/Ellipse6.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
