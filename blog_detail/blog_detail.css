@@ -10,6 +10,18 @@
     color: #333;
 }
 
+@media screen and (max-width: 1024px) {
+    .fv_title {
+        font-size: 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .fv_title {
+        font-size: 64px;
+    }
+}
+
 .fv_subtitle {
     font-size: 14px;
     width: fit-content;
@@ -56,8 +68,21 @@
     gap: 200px;
 }
 
+@media screen and (max-width: 900px) {
+    .blog_inner {
+        flex-direction: column;
+        gap: 80px;
+    }
+}
+
 .blog_category {
     width: 15%;
+}
+
+@media screen and (max-width: 900px) {
+    .blog_category {
+        width: 100%;
+    }
 }
 
 .blog_category_title {
@@ -71,9 +96,33 @@
     padding-top: 20px;
 }
 
+@media screen and (max-width: 900px) {
+    .blog_category_list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
 .blog_category_list_item {
     line-height: 160%;
     margin-bottom: 8px;
+    color: #ACACAC;
+    font-weight: 500;
+}
+
+.blog_category_list_item.active {
+    color: #333;
+}
+
+.blog_category_list_item.active::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #F7E40B;
+    margin-right: 10px;
 }
 
 .blog_detail_info {
@@ -102,16 +151,29 @@
     line-height: 160%;
 }
 
+@media screen and (max-width: 900px) {
+    .blog_detail_content_title_large {
+        font-size: 24px;
+    }
+}
+
 .blog_detail_content_title_middle {
     font-size: 24px;
     font-weight: 700;
     line-height: 160%;
     border-bottom: 4px solid #F7E40B;
     background-color: #F2F2EA;
-    height: 66px;
-    line-height: 62px;
-    padding-left: 24px;
+    min-height: 66px;
     margin-top: 64px;
+    padding-block: 12px;
+    padding-inline: 24px;
+    height: fit-content;
+}
+
+@media screen and (max-width: 900px) {
+    .blog_detail_content_title_middle {
+        font-size: 20px;
+    }
 }
 
 .blog_detail_content_title_short {
@@ -120,18 +182,27 @@
     font-weight: 700;
     line-height: 160%;
     border-left: 4px solid #F7E40B;
-    height: 24px;
+    min-height: 24px;
+    height: fit-content;
     align-items: center;
-    padding-left: 16px;
+    padding-inline: 16px;
     margin-top: 64px;
 }
 
+@media screen and (max-width: 900px) {
+    .blog_detail_content_title_short {
+        font-size: 18px;
+    }
+}
+
 .blog_detail_content_img {
-    width: 800px;
-    height: 400px;
+    max-width: 800px;
+    max-height: 400px;
     object-fit: cover;
     margin-top: 32px;
+    width: 100%;
 }
+
 
 .blog_detail_content_text_large {
     margin-top: 28px;

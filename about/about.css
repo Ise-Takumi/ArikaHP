@@ -243,6 +243,12 @@
     margin-left: auto;
 }
 
+@media screen and (max-width: 1024px) {
+    .company_items {
+        width: 100%;
+    }
+}
+
 .company_item {
     display: flex;
     justify-content: space-between;
@@ -258,12 +264,20 @@
     padding-block: 32px;
 }
 
+@media screen and (max-width: 768px) {
+    .company_item_label {
+        width: 40%;
+    }
+}
+
 .company_item_value {
     text-align: left;
     width: 80%;
     border-bottom: 2px solid #DDDDDD;
     padding-block: 32px;
 }
+
+
 
 
 
