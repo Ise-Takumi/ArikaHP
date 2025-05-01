@@ -277,6 +277,14 @@
     padding-block: 32px;
 }
 
+.company_item_map {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-top: 32px;
+}
+
+
+
 
 
 
