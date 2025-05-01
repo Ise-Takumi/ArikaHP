@@ -164,7 +164,7 @@ body {
 
 @media screen and (max-width: 768px) {
     .fv_title {
-        font-size: 64px;
+        font-size: 48px;
     }
 }
 
@@ -178,6 +178,12 @@ body {
 /* contact */
 .contact {
     padding-bottom: 130px;
+}
+
+@media screen and (max-width: 768px) {
+    .contact {
+        padding-bottom: 70px;
+    }
 }
 
 .contact_inner {
@@ -194,6 +200,7 @@ body {
 @media screen and (max-width: 768px) {
     .contact_text {
         font-size: 16px;
+        margin-top: 50px;
     }
 }
 
@@ -201,10 +208,22 @@ body {
     margin-top: 80px;
 }
 
+@media screen and (max-width: 768px) {
+    .contact_form_container {
+        margin-top: 50px;
+    }
+}
+
 .contact_form {
     display: flex;
     flex-direction: column;
     gap: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .contact_form {
+        gap: 30px;
+    }
 }
 
 .form_group {

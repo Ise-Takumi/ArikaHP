@@ -3,6 +3,12 @@
     margin-top: 100px;
 }
 
+@media screen and (max-width: 768px) {
+    .fv {
+        margin-top: 60px;
+    }
+}
+
 .fv_title {
     font-size: 120px;
     font-weight: 500;
@@ -18,7 +24,7 @@
 
 @media screen and (max-width: 768px) {
     .fv_title {
-        font-size: 64px;
+        font-size: 48px;
     }
 }
 
@@ -27,6 +33,12 @@
     width: fit-content;
     line-height: 30px;
     height: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .fv_subtitle {
+        font-size: 12px;
+    }
 }
 
 .subtitle_point {
@@ -42,6 +54,13 @@
 .section_text {
     margin-top: 60px;
     width: 60%;
+}
+
+@media screen and (max-width: 768px) {
+    .section_text {
+        margin-top: 30px;
+        width: 100%;
+    }
 }
 
 .section_text_title {
@@ -62,6 +81,13 @@
     padding-bottom: 130px;
 }
 
+@media screen and (max-width: 768px) {
+    .blog {
+        margin-top: 50px;
+        padding-bottom: 70px;
+    }
+}
+
 .blog_inner {
     display: flex;
     justify-content: space-between;
@@ -72,6 +98,12 @@
     .blog_inner {
         flex-direction: column;
         gap: 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blog_inner {
+        gap: 50px;
     }
 }
 
@@ -92,6 +124,12 @@
     padding-bottom: 20px;
 }
 
+@media screen and (max-width: 768px) {
+    .blog_category_title {
+        font-size: 18px;
+    }
+}
+
 .blog_category_list {
     padding-top: 20px;
 }
@@ -104,11 +142,23 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .blog_category_list {
+        gap: 5px;
+    }
+}
+
 .blog_category_list_item {
     line-height: 160%;
     margin-bottom: 8px;
     color: #ACACAC;
     font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    .blog_category_list_item {
+        font-size: 14px;
+    }
 }
 
 .blog_category_list_item.active {
@@ -176,6 +226,12 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .blog_detail_content_title_middle {
+        margin-top: 32px;
+    }
+}
+
 .blog_detail_content_title_short {
     display: flex;
     font-size: 20px;
@@ -192,6 +248,12 @@
 @media screen and (max-width: 900px) {
     .blog_detail_content_title_short {
         font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blog_detail_content_title_short {
+        margin-top: 32px;
     }
 }
 
