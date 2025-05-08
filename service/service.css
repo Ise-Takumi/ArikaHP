@@ -172,6 +172,8 @@
     text-align: center;
     line-height: 40px;
     margin-top: 8px;
+    padding: 0;
+    font-size: 14px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -181,7 +183,6 @@
         font-size: 12px;
         line-height: 30px;
         margin-top: 10px;
-        padding: 10px;
     }
 }
 
@@ -190,11 +191,10 @@
         width: 100px;
         height: 20px;
         font-size: 8px;
-        padding-inline: 15px;
     }
 }
 
-.contact_element {
+.element2 {
     position: absolute;
     display: flex;
     align-items: center;
@@ -203,7 +203,8 @@
     color: #333;
     opacity: 0.1;
     transform-origin: center;
-    font-weight: 700;
+    font-weight: bold;
+    font-family: 'Outfit', sans-serif;
 }
 
 /* strengths */
@@ -215,7 +216,14 @@
 @media screen and (max-width: 768px) {
     .strengths {
         margin-top: 70px;
-        padding-bottom: 70px;
+        padding-bottom: 90px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .strengths {
+        margin-top: 50px;
+        padding-bottom: 120px;
     }
 }
 
@@ -251,6 +259,12 @@
 @media screen and (max-width: 768px) {
     .strengths_inner {
         gap: 100px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .strengths_inner {
+        gap: 25vw;
     }
 }
 
@@ -332,22 +346,31 @@
     height: 40vw;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .strengths_triangle::before {
-        top: 50px;
-        left: -250px;
+        top: 100px;
+        left: -80px;
     }
 }
 
-.element {
+@media screen and (max-width: 768px) {
+    .strengths_triangle::before {
+        top: 100px;
+        left: -10px;
+    }
+}
+
+.element1 {
     top: 50%;
     left: 50%;
+    font-family: 'Outfit', sans-serif;
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 32px;
     color: #333;
+    font-weight: bold;
     opacity: 0.1;
 }
 
@@ -427,6 +450,14 @@
         width: 150px;
         height: 150px;
         font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .strengths_triangle_item {
+        width: 130px;
+        height: 130px;
+        font-size: 10px;
     }
 }
 
@@ -670,6 +701,7 @@
     height: 50px;
     text-align: center;
     margin-block: 60px 90px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {

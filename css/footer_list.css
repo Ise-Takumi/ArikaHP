@@ -1,0 +1,64 @@
+.footer {
+    background-color: #333;
+    color: #FFF;
+    padding: 100px 0;
+}   
+
+.footer_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_logo {
+    width: 180px;
+}
+
+.footer_address {
+   margin-top: 20px;
+}
+
+.footer_menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2列のグリッド */
+    column-gap: 120px; /* 横の間隔を120pxに設定 */
+    row-gap: 40px; /* 縦の間隔を40pxに設定 */
+}
+
+.footer_menu_item_title {
+    font-size: 32px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.footer_menu_item_text {
+    font-size: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+    .footer_logo {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 50px 0;
+    }
+
+    .footer_container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer_logo {
+        width: 120px;
+    }
+
+    .footer_menu {
+        column-gap: initial;
+        row-gap: 20px;
+    }
+
+    .footer_menu_item_title {
+        font-size: 24px;
+    }
+}

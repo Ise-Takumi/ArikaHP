@@ -6,6 +6,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="destyle.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer_list.css">
+    <link rel="stylesheet" href="css/footer_contact.css">
     <link rel="stylesheet" href="index.css">
     <!-- Noto sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,7 +60,7 @@
             </div>
             <div class="mission_container">
                 <div class="mission_img u-pc">
-                    <img src="/images/mission_bigger.png" alt="" class="mission_img_bigge u-pc">
+                    <img src="/images/mission_bigger.png" alt="" class="mission_img_bigger u-pc">
                     <img src="/images/mission_smaller.png" alt="" class="mission_img_smaller u-pc">
                 </div>
                 <div class="mission_description">
@@ -67,12 +70,24 @@
                         <span class="button_arrow-left">
                             →
                         </span>
-                        <span>私たちについて</span>
+                        <span class="button_text">私たちについて</span>
                         <span class="button_arrow-right">
                             →
                         </span>
                     </button>
                 </div>
+            </div>
+        </div>
+        <div class="mission_container_scroll">
+            <div class="mission_container_scroll_text">
+                <ul class="mission_container_scroll_list mission_container_scroll_list--left">
+                    <li class="mission_container_scroll_item">Mission</li>
+                    <li class="mission_container_scroll_item">Mission</li>
+                </ul>
+                <ul class="mission_container_scroll_list mission_container_scroll_list--left">
+                    <li class="mission_container_scroll_item">Mission</li>
+                    <li class="mission_container_scroll_item">Mission</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -116,8 +131,11 @@
                     <p class="section_text section_text_white">事業内容</p>
                 </div>
                 <button class="button services_button">
-                    <span>事業内容について</span>
-                    <span class="button_arrow">
+                    <span class="button_arrow-left">
+                        →
+                    </span>
+                    <span class="button_text services_button_text">事業内容について</span>
+                    <span class="button_arrow-right">
                         →
                     </span>
                 </button>
@@ -158,8 +176,11 @@
                         <p class="projects_item_text">Creative</p>
                         <p class="projects_item_description">HPに必要な動画・画像制作等を承ります。<br>名刺やチラシなどの作成も承ります。</p>
                         <button class="button projects_item_button">
-                            <span>詳細を見る</span>
-                            <span class="button_arrow">
+                            <span class="button_arrow-left">
+                                →
+                            </span>
+                            <span class="button_text">詳細を見る</span>
+                            <span class="button_arrow-right">
                                 →
                             </span>
                         </button>
@@ -180,8 +201,11 @@
                         <p class="projects_item_text">Social Media Marketing</p>
                         <p class="projects_item_description">SNSの強みを活用したイベント企画も行っております。</p>
                         <button class="button projects_item_button">
-                            <span>詳細を見る</span>
-                            <span class="button_arrow">
+                            <span class="button_arrow-left">
+                                →
+                            </span>
+                            <span class="button_text">詳細を見る</span>
+                            <span class="button_arrow-right">
                                 →
                             </span>
                         </button>
@@ -202,8 +226,11 @@
                         <p class="projects_item_text">AI Marketing</p>
                         <p class="projects_item_description">AIを活用したSEO対策などのマーケティング施策</p>
                         <button class="button projects_item_button">
-                            <span>詳細を見る</span>
-                            <span class="button_arrow">
+                            <span class="button_arrow-left">
+                                →
+                            </span>
+                            <span class="button_text">詳細を見る</span>
+                            <span class="button_arrow-right">
                                 →
                             </span>
                         </button>
@@ -224,8 +251,11 @@
                         <p class="projects_item_text">Software Development</p>
                         <p class="projects_item_description">ios,Androidアプリ制作/AI技術開発/その他システム開発<br>あなたの気持ちに寄り添います。</p>
                         <button class="button projects_item_button">
-                            <span>詳細を見る</span>
-                            <span class="button_arrow">
+                            <span class="button_arrow-left">
+                                →
+                            </span>
+                            <span class="button_text">詳細を見る</span>
+                            <span class="button_arrow-right">
                                 →
                             </span>
                         </button>
@@ -245,7 +275,7 @@
             </div>
         </div>
     </section>
-    <section class="members">
+    <section class="members" id="members">
         <div class="members_inner">
             <div class="members_container">
                 <div>
@@ -325,8 +355,11 @@
                         <p class="section_text">ブログ</p>
                     </div>
                     <button class="button blog_button">
-                        <span>ブログ一覧へ</span>
-                        <span class="button_arrow">
+                        <span class="button_arrow-left">
+                            →
+                        </span>
+                        <span class="button_text">ブログ一覧へ</span>
+                        <span class="button_arrow-right">
                             →
                         </span>
                     </button>
@@ -341,7 +374,7 @@
                         </div>
                         <h4 class="blog_item_title">ブログタイトルが入ります。ブログタイトルが入ります。</h4>
                     </div>
-                    <div class="blog_item_arrow">→</div>
+                    <div class="blog_item_arrow"><span class="u-pc">→</span><span class="u-sp">more →</span></div>
                 </div>
                 <div class="blog_item">
                     <div class="blog_item_text">
@@ -351,7 +384,7 @@
                         </div>
                         <h4 class="blog_item_title">ブログタイトルが入ります。ブログタイトルが入ります。</h4>
                     </div>
-                    <div class="blog_item_arrow">→</div>
+                    <div class="blog_item_arrow"><span class="u-pc">→</span></span><span class="u-sp">more →</span></div>
                 </div>
                 <div class="blog_item">
                     <div class="blog_item_text">
@@ -361,7 +394,7 @@
                         </div>
                         <h4 class="blog_item_title">ブログタイトルが入ります。ブログタイトルが入ります。</h4>
                     </div>
-                    <div class="blog_item_arrow">→</div>
+                    <div class="blog_item_arrow"><span class="u-pc">→</span><span class="u-sp">more →</span></div>
                 </div>
             </div>
         </div>
@@ -370,13 +403,17 @@
         <div class="contact">
             <div class="inner">
                 <div class="contact_container">
+                    <div id="fv_contact_circle" class="contact_circle"></div>
                     <div>
                         <h2 class="section_title section_title_white">Contact</h2>
                         <p class="section_text section_text_white">お問い合わせ</p>
                     </div>
                     <button class="button contact_button">
-                        <span>お問い合わせ</span>
-                        <span class="button_arrow">
+                        <span class="button_arrow-left">
+                            →
+                        </span>
+                        <span class="button_text">お問い合わせ</span>
+                        <span class="button_arrow-right">
                             →
                         </span>
                     </button>
@@ -387,8 +424,8 @@
             <div class="inner">
                 <div class="footer_container">
                     <div>
-                        <img src="" alt="">
-                        <div>
+                        <img src="/images/logo.png" alt="" class="footer_logo">
+                        <div class="footer_address">
                             <p>株式会社アリカ</p>
                             <p>〒651-0084</p>
                             <p>兵庫県神戸市中央区磯辺通1丁目20-505</p>
@@ -396,12 +433,16 @@
                     </div>
                     <div class="footer_menu">
                         <div class="footer_menu_item">
-                            <h4 class="footer_menu_item_title">About us</h4>
-                            <p class="footer_menu_item_text">私たちについて</p>
+                            <a href="/about/about.html">
+                                <h4 class="footer_menu_item_title">About us</h4>
+                                <p class="footer_menu_item_text">私たちについて</p>
+                            </a>
                         </div>
                         <div class="footer_menu_item">
-                            <h4 class="footer_menu_item_title">Services</h4>
-                            <p class="footer_menu_item_text">事業内容</p>
+                            <a href="/service/service.html">
+                                <h4 class="footer_menu_item_title">Services</h4>
+                                <p class="footer_menu_item_text">事業内容</p>
+                            </a>
                         </div>
                         <div class="footer_menu_item">
                             <h4 class="footer_menu_item_title">Plan</h4>
@@ -412,22 +453,28 @@
                             <p class="footer_menu_item_text">プロジェクト</p>
                         </div>
                         <div class="footer_menu_item">
-                            <h4 class="footer_menu_item_title">Member</h4>
-                            <p class="footer_menu_item_text">メンバー紹介</p>
+                            <a href="#members">
+                                <h4 class="footer_menu_item_title">Member</h4>
+                                <p class="footer_menu_item_text">メンバー紹介</p>
+                            </a>
                         </div>
                         <div class="footer_menu_item">
-                            <h4 class="footer_menu_item_title">Blog</h4>
-                            <p class="footer_menu_item_text">ブログ</p>
+                            <a href="/blog/blog.html">
+                                <h4 class="footer_menu_item_title">Blog</h4>
+                                <p class="footer_menu_item_text">ブログ</p>
+                            </a>
                         </div>
                         <div class="footer_menu_item">   
-                            <h4 class="footer_menu_item_title">Contact</h4>
-                            <p class="footer_menu_item_text">お問い合わせ</p>
+                            <a href="/contact/contact.html">
+                                <h4 class="footer_menu_item_title">Contact</h4>
+                                <p class="footer_menu_item_text">お問い合わせ</p>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </footer>    
-    <!-- <script type="module" src="/js/main.js"></script> -->
+    <script type="module" src="/js/main.js"></script>
 </body>
 </html>

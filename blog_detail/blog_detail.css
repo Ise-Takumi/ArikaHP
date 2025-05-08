@@ -197,7 +197,7 @@
 
 .blog_detail_content_title_large {
     font-size: 28px;
-    font-weight: 700;
+    font-weight: bold;
     line-height: 160%;
 }
 
@@ -209,7 +209,7 @@
 
 .blog_detail_content_title_middle {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: bold;
     line-height: 160%;
     border-bottom: 4px solid #F7E40B;
     background-color: #F2F2EA;
@@ -235,7 +235,7 @@
 .blog_detail_content_title_short {
     display: flex;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: bold;
     line-height: 160%;
     border-left: 4px solid #F7E40B;
     min-height: 24px;

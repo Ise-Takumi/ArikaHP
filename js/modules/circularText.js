@@ -1,127 +1,156 @@
-export function initCircularText() {
-    // strengths_triangle_center用の円形テキスト配置
-    const circle = document.getElementById("strengths_triangle_center");
+export function initCircularText(options = {}) {
+    const defaultOptions = {
+        circleId: "strengths_triangle_center",
+        text: "Marketing Marketing Marketing Marketing",
+        radius: 180,
+        fontSize: 25,
+        rotationSpeed: 0.15,
+        number: 1,
+    };
+
+    const settings = { ...defaultOptions, ...options };
+    const circle = document.getElementById(settings.circleId);
+    if (!circle) return;
+
+    // 共通の設定値を管理するオブジェクト
+    const config = {
+        elements: null,
+        rotation: 0,
+        animationId: null,
+        container: null
+    };
+
+    // 画面サイズに基づく設定値を取得
+    function getSettings() {
+        const isMobile = window.innerWidth <= 768;
+        const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
+        
+        return {
+            size: isMobile ? settings.fontSize * 0.6 : isTablet ? settings.fontSize * 0.8 : settings.fontSize,
+            radius: isMobile ? settings.radius * 0.6 : isTablet ? settings.radius * 0.7 : settings.radius,
+            text: settings.text
+        };
+    }
+
+    // 要素の位置を更新する共通関数
+    function updateElementPosition(element, index, settings, rotation = 0) {
+        const angle = (360 / settings.text.length) * index + rotation;
+        const centerX = circle.clientWidth / 2 - settings.size / 2;
+        const centerY = circle.clientHeight / 2 - settings.size / 2;
+        const x = Math.cos(((angle - 90) * Math.PI) / 180) * settings.radius + centerX;
+        const y = Math.sin(((angle - 90) * Math.PI) / 180) * settings.radius + centerY;
+        
+        element.style.left = `${x}px`;
+        element.style.top = `${y}px`;
+        element.style.transform = `rotate(${angle}deg)`;
+    }
 
     function updateCircularText() {
-        // 既存の要素を削除
-
-        // ウィンドウサイズに応じてサイズを調整
-        const isMobile = window.innerWidth <= 768;
-        const size = isMobile ? 15 : 25;
-        const radius = isMobile ? 120 : 180;
-        const text = isMobile ? "Marketing Marketing Marketing" : "Marketing Marketing Marketing Marketing";
-
-        for (let i = 0; i < text.length; i++) {
-            const element = document.createElement("div");
-            element.className = "element";
-            element.textContent = text[i];
-            circle.appendChild(element);
-
-            element.style.width = `${size}px`;
-            element.style.height = `${size}px`;
-
-            const angle = (360 / text.length) * i;
-            const centerX = circle.clientWidth / 2 - size / 2;
-            const centerY = circle.clientHeight / 2 - size / 2;
-            const x = Math.cos(((angle - 90) * Math.PI) / 180) * radius + centerX;
-            const y = Math.sin(((angle - 90) * Math.PI) / 180) * radius + centerY;
-            element.style.left = `${x}px`;
-            element.style.top = `${y}px`;
-
-            element.style.transform = `rotate(${angle}deg)`;
+        // アニメーションを停止
+        if (config.animationId) {
+            cancelAnimationFrame(config.animationId);
         }
+
+        // 既存のコンテナを削除
+        if (config.container) {
+            config.container.remove();
+        }
+
+        // 既存のコンテナがあれば削除（他のインスタンスのものも含む）
+        const existingContainer = circle.querySelector(`.circular-text-container-${settings.circleId}`);
+        if (existingContainer) {
+            existingContainer.remove();
+        }
+
+        // 新しいコンテナを作成（一意のクラス名を使用）
+        const container = document.createElement('div');
+        container.className = `circular-text-container-${settings.circleId}`;
+        Object.assign(container.style, {
+            position: 'absolute',
+            top: '0',
+            left: '0',
+            width: '100%',
+            height: '100%',
+            pointerEvents: 'none',
+            zIndex: '1'
+        });
+
+        const currentSettings = getSettings();
+
+        const elements = Array.from({ length: currentSettings.text.length }, (_, i) => {
+            const element = document.createElement("div");
+            element.className = "element" + settings.number;
+            element.textContent = currentSettings.text[i];
+            element.style.width = `${currentSettings.size}px`;
+            element.style.height = `${currentSettings.size}px`;
+            container.appendChild(element);
+            return element;
+        });
+
+        circle.appendChild(container);
+        config.container = container;
+        config.elements = elements;
+
+        elements.forEach((element, index) => {
+            updateElementPosition(element, index, currentSettings);
+        });
+
+        // アニメーションを再開
+        animate();
+    }
+
+    function animate() {
+        config.rotation += settings.rotationSpeed;
+        const currentSettings = getSettings();
+        
+        config.elements.forEach((element, index) => {
+            updateElementPosition(element, index, currentSettings, config.rotation);
+        });
+        
+        config.animationId = requestAnimationFrame(animate);
     }
 
     // 初期表示
     updateCircularText();
 
-    // 回転アニメーション
-    let rotation = 0;
-    function animate() {
-        rotation += 0.15;
-        const elements = document.querySelectorAll('.element');
-        const isMobile = window.innerWidth <= 768;
-        const radius = isMobile ? 120 : 180;
-        const size = isMobile ? 15 : 25;
-        const text = isMobile ? "Marketing Marketing Marketing" : "Marketing Marketing Marketing Marketing";
+    // リサイズイベントの最適化
+    let resizeTimeout;
+    const handleResize = () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(updateCircularText, 250);
+    };
+    window.addEventListener('resize', handleResize);
 
-        elements.forEach((element, index) => {
-            const angle = (360 / text.length) * index + rotation;
-            const centerX = circle.clientWidth / 2 - size / 2;
-            const centerY = circle.clientHeight / 2 - size / 2;
-            const x = Math.cos(((angle - 90) * Math.PI) / 180) * radius + centerX;
-            const y = Math.sin(((angle - 90) * Math.PI) / 180) * radius + centerY;
-            element.style.left = `${x}px`;
-            element.style.top = `${y}px`;
-            element.style.transform = `rotate(${angle}deg)`;
-        });
-        requestAnimationFrame(animate);
-    }
-    // animate();
-
-    // ウィンドウサイズ変更時の処理
-    window.addEventListener('resize', () => {
-        updateCircularText();
-    });
-
-    
-    // fv_contact_circle用の円形テキスト配置
-    const contactCircle = document.getElementById("fv_contact_circle");
-
-    // const contactButton = document.querySelector('.contact_button');
-    if (!contactButton) return;
-
-    const circularText = document.createElement('div');
-    circularText.className = 'circular-text';
-    contactButton.appendChild(circularText);
-
-    function updateContactCircularText() {
-        const text = 'お問い合わせお問い合わせお問い合わせお問い合わせ';
-        const radius = 100;
-        const angleStep = (2 * Math.PI) / text.length;
-        
-        circularText.innerHTML = '';
-        
-        for (let i = 0; i < text.length; i++) {
-            const angle = i * angleStep;
-            const x = radius * Math.cos(angle);
-            const y = radius * Math.sin(angle);
-            
-            const span = document.createElement('span');
-            span.textContent = text[i];
-            span.style.transform = `translate(${x}px, ${y}px) rotate(${angle}rad)`;
-            circularText.appendChild(span);
+    // クリーンアップ関数を返す
+    return () => {
+        if (config.animationId) {
+            cancelAnimationFrame(config.animationId);
         }
-    }
+        if (config.container) {
+            config.container.remove();
+        }
+        window.removeEventListener('resize', handleResize);
+    };
+}
 
-    updateContactCircularText();
+// 複数の円形テキストを初期化
+const circularTexts = [
+    {
+        circleId: "strengths_triangle_center",
+        text: "Marketing Marketing Marketing Marketing",
+        radius: 180,
+        fontSize: 25,
+        rotationSpeed: 0.15,
+        number: 1,
+    },
+    {
+        circleId: "fv_contact_circle",
+        text: "contact contact contact contact",
+        radius: 90,
+        fontSize: 12,
+        rotationSpeed: 0.15,
+        number: 2,
+    },
+];
 
-    // お問い合わせ用の回転アニメーション
-    let contactRotation = 0;
-    function animateContact() {
-        contactRotation += 0.15;
-        const contactElements = document.querySelectorAll('.contact_element');
-        const isMobile = window.innerWidth <= 768;
-        const radius = isMobile ? 60 : 90;
-        const size = isMobile ? 15 : 20;
-        const contactText = isMobile ? "contact contact contact" : "contact contact contact contact";
-
-        contactElements.forEach((element, index) => {
-            const angle = (360 / contactText.length) * index + contactRotation;
-            const centerX = contactCircle.clientWidth / 2 - size / 2;
-            const centerY = contactCircle.clientHeight / 2 - size / 2;
-            const x = Math.cos(((angle - 90) * Math.PI) / 180) * radius + centerX;
-            const y = Math.sin(((angle - 90) * Math.PI) / 180) * radius + centerY;
-            element.style.left = `${x}px`;
-            element.style.top = `${y}px`;
-            element.style.transform = `rotate(${angle}deg)`;
-        });
-        requestAnimationFrame(animateContact);
-    }
-    // animateContact();
-
-    // ウィンドウサイズ変更時の処理
-    window.addEventListener('resize', () => {
-        updateContactCircularText();
-    });
-} 
+circularTexts.forEach(config => initCircularText(config));

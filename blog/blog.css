@@ -272,6 +272,16 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .blog_list_item_arrow {
+        background-color: #333;
+        color: #FFF;
+        padding: 5px 10px;
+        border-radius: 20px;
+        margin: 0 10px 10px auto;
+    }
+}
+
 .hamburger_button {
     display: none;
     background: none;

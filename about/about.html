@@ -6,6 +6,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="/destyle.css">
     <link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/css/header.css">
+<link rel="stylesheet" href="/css/footer_list.css">
+<link rel="stylesheet" href="/css/footer_contact.css">
     <link rel="stylesheet" href="about.css">
     <!-- Noto sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -145,8 +148,11 @@
                         <p class="section_text section_text_white">お問い合わせ</p>
                     </div>
                     <button class="button contact_button">
-                        <span>お問い合わせ</span>
-                        <span class="button_arrow">
+                        <span class="button_arrow-left">
+                            →
+                        </span>
+                        <span class="button_text">お問い合わせ</span>
+                        <span class="button_arrow-right">
                             →
                         </span>
                     </button>
@@ -157,8 +163,8 @@
             <div class="inner">
                 <div class="footer_container">
                     <div>
-                        <img src="" alt="">
-                        <div>
+                        <img src="/images/logo.png" alt="" class="footer_logo">
+                        <div class="footer_address">
                             <p>株式会社アリカ</p>
                             <p>〒651-0084</p>
                             <p>兵庫県神戸市中央区磯辺通1丁目20-505</p>
@@ -166,12 +172,16 @@
                     </div>
                     <div class="footer_menu">
                         <div class="footer_menu_item">
-                            <h4 class="footer_menu_item_title">About us</h4>
-                            <p class="footer_menu_item_text">私たちについて</p>
+                            <a href="/about/about.html">
+                                <h4 class="footer_menu_item_title">About us</h4>
+                                <p class="footer_menu_item_text">私たちについて</p>
+                            </a>
                         </div>
                         <div class="footer_menu_item">
-                            <h4 class="footer_menu_item_title">Services</h4>
-                            <p class="footer_menu_item_text">事業内容</p>
+                            <a href="/service/service.html">
+                                <h4 class="footer_menu_item_title">Services</h4>
+                                <p class="footer_menu_item_text">事業内容</p>
+                            </a>
                         </div>
                         <div class="footer_menu_item">
                             <h4 class="footer_menu_item_title">Plan</h4>
@@ -182,22 +192,28 @@
                             <p class="footer_menu_item_text">プロジェクト</p>
                         </div>
                         <div class="footer_menu_item">
-                            <h4 class="footer_menu_item_title">Member</h4>
-                            <p class="footer_menu_item_text">メンバー紹介</p>
+                            <a href="/index.html#members">
+                                <h4 class="footer_menu_item_title">Member</h4>
+                                <p class="footer_menu_item_text">メンバー紹介</p>
+                            </a>
                         </div>
                         <div class="footer_menu_item">
-                            <h4 class="footer_menu_item_title">Blog</h4>
-                            <p class="footer_menu_item_text">ブログ</p>
+                            <a href="/blog/blog.html">
+                                <h4 class="footer_menu_item_title">Blog</h4>
+                                <p class="footer_menu_item_text">ブログ</p>
+                            </a>
                         </div>
                         <div class="footer_menu_item">   
-                            <h4 class="footer_menu_item_title">Contact</h4>
-                            <p class="footer_menu_item_text">お問い合わせ</p>
+                            <a href="/contact/contact.html">
+                                <h4 class="footer_menu_item_title">Contact</h4>
+                                <p class="footer_menu_item_text">お問い合わせ</p>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>       
+    </footer>      
     <script type="module" src="/js/main.js"></script>
 </body>
 </html>
